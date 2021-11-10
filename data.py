@@ -37,7 +37,7 @@ def get_nli_dataset(config, tokenizer):
         test_hypotheses = test_df["sentence2"]
         test_labels = test_df["gold_label"]
     else:
-        train_data = datasets.load_dataset("xnli", config.train_language, split="train")
+        train_dataset = datasets.load_dataset("xnli", config.train_language, split="train")
         train_premises = train_dataset["premise"]
         train_hypotheses = train_dataset["hypothesis"]
         train_labels = train_dataset["label"]
